@@ -1,0 +1,28 @@
+{
+  "name": "protractor-workshop-2017",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Protractor",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blesfia/protractor-workshop-2017.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "protractor"
+  ],
+  "author": "David Sanchez - jsancheze@psl.com.co (Blesfia)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Blesfia/protractor-workshop-2017/issues"
+  },
+  "homepage": "https://github.com/Blesfia/protractor-workshop-2017#readme",
+  "dependencies": {
+    "protractor": "^5.1.2"
+  }
+}
