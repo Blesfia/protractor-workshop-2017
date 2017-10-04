@@ -1,3 +1,5 @@
+import { browser } from 'protractor';
+
 describe('Given a SDET learning protractor', () => {
   describe('when open Google Page', () => {
     beforeEach(() => {
@@ -8,4 +10,4 @@ describe('Given a SDET learning protractor', () => {
       expect(browser.getTitle()).toEqual('Google');
     });
   });
- });
+});
