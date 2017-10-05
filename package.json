@@ -4,11 +4,10 @@
   "description": "This is a Workshop about Protractor",
   "main": "index.js",
   "scripts": {
-    "test": "protractor protractor.config.js",
+    "test": "npm run build && protractor dist/protractor/config.js",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "build": "tsc",
-    "test": "npm run build && protractor dist/protractor/config.js" 
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -30,6 +29,7 @@
     "protractor": "^5.1.2"
   },
   "devDependencies": {
+    "jasmine-spec-reporter": "^4.2.1",
     "@types/jasminewd2": "^2.0.3",
     "typescript": "^2.5.3"
   }
