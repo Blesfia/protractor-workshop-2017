@@ -25,9 +25,6 @@ describe('Buy a t-shirt', () => {
   const paymentStepPage: PaymentStepPage = new PaymentStepPage();
   const bankPaymentPage: BankPaymentPage = new BankPaymentPage();
   const orderResumePage: OrderResumePage = new OrderResumePage();
-  beforeEach(() => {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
-  });
 
   it('then should be bought a t-shirt', async () => {
 
