@@ -1,4 +1,4 @@
-import { $, ElementFinder, browser } from 'protractor';
+import { $, ElementFinder } from 'protractor';
 
 export class ShippingStepPage {
 
@@ -12,7 +12,6 @@ export class ShippingStepPage {
 
   public async goToPaymentStepPage() {
     await this.termsCheckBox.click();
-    await (browser.sleep(3000));
     return this.proceedToCheckoutButton.click();
   }
 }
