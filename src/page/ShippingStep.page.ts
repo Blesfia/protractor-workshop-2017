@@ -1,7 +1,6 @@
 import { $, ElementFinder, browser } from 'protractor';
 
 export class ShippingStepPage {
-
   private get proceedToCheckoutButton(): ElementFinder {
     return $('#form > p > button > span');
   }
@@ -10,9 +9,9 @@ export class ShippingStepPage {
     return $('#cgv');
   }
 
-  public async goToPaymentStepPage() {
+  public async goToPaymentStepPage(): Promise<void> {
     await this.termsCheckBox.click();
     await (browser.sleep(3000));
-    return this.proceedToCheckoutButton.click();
+    await this.proceedToCheckoutButton.click();
   }
 }

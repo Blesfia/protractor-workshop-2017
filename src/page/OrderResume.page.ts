@@ -1,12 +1,11 @@
 import { $, ElementFinder } from 'protractor';
 
 export class OrderResumePage {
-
-  private get messageOfAccomplish(): ElementFinder {
+  private get accomplishLabel(): ElementFinder {
     return $('#center_column > div > p > strong');
   }
 
   public getMessageOfAccomplish() {
-    return this.messageOfAccomplish.getText();
+    return this.accomplishLabel.getText();
   }
 }
