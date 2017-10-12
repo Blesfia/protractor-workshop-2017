@@ -4,7 +4,7 @@ import { reporter } from './helpers/reporter';
 export const config: Config = {
   framework: 'jasmine',
   SELENIUM_PROMISE_MANAGER: false,
-  getPageTimeout: 1000,
+  getPageTimeout: 30000,
   specs: ['../test/**/*.spec.js'],
   noGlobals: true,
   onPrepare: () => {
@@ -17,5 +17,8 @@ export const config: Config = {
     chromeOptions: {
       args: ['--headless', '--disable-gpu', '--window-size=800,600']
     }
+  },
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 120000
   }
 };

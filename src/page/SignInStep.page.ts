@@ -11,12 +11,9 @@ export class SignInStepPage {
     return $('#SubmitLogin > span');
   }
 
-  private async fillForm() {
+  public async goToAddressStep(): Promise<void> {
     await this.emailTextBox.sendKeys('aperdomobo@gmail.com');
     await this.passwordTextBox.sendKeys('WorkshopProtractor');
-  }
-  public async goToAddressStep() {
-    await this.fillForm();
-    return this.signInButton.click();
+    await this.signInButton.click();
   }
 }
