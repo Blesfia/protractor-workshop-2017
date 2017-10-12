@@ -1,4 +1,4 @@
-import { $, ElementFinder, promise } from 'protractor';
+import { $, ElementFinder, ExpectedConditions, browser } from 'protractor';
 
 export class ProductAddedModalPage {
 
@@ -6,7 +6,8 @@ export class ProductAddedModalPage {
     return $('[style*="display: block;"] .button-container > a');
   }
 
-  public goToCheckoutPage(): promise.Promise<void> {
+  public async goToCheckoutPage(): Promise<void> {
+    await browser.wait(ExpectedConditions.presenceOf(this.proceedToCheckoutButton), 3000);
     return this.proceedToCheckoutButton.click();
   }
 }
