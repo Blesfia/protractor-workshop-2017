@@ -8,7 +8,7 @@ export class SignInStepPage {
     return $('#passwd');
   }
   private get signInButton(): ElementFinder {
-    return $('#SubmitLogin > span');
+    return $('#SubmitLogin');
   }
 
   private async fillForm() {

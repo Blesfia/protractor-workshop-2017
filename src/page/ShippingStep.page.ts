@@ -3,7 +3,7 @@ import { $, ElementFinder } from 'protractor';
 export class ShippingStepPage {
 
   private get proceedToCheckoutButton(): ElementFinder {
-    return $('#form > p > button > span');
+    return $('.cart_navigation > button');
   }
 
   private get termsCheckBox(): ElementFinder {
