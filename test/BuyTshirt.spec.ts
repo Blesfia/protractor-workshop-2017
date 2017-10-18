@@ -26,25 +26,38 @@ describe('Buy a t-shirt', () => {
   const bankPaymentPage: BankPaymentPage = new BankPaymentPage();
   const orderResumePage: OrderResumePage = new OrderResumePage();
 
-  it('then should be bought a t-shirt', async () => {
-
-    await browser.get('http://automationpractice.com/');
-
-    await menuContentPage.goToTShirtMenu();
-    await productListPage.goToTShirtProductDetail();
-    await productDetailPage.addToCart();
-    await productAddedModalPage.goToCheckoutPage();
-    await summaryStepPage.goToSignInPage();
-
-    await signInStepPage.goToAddressStep();
-
-    await addressStepPage.goToShippingStepPage();
-
-    await shippingStepPage.goToPaymentStepPage();
-    await paymentStepPage.goToCheckPaymentStepPage();
-    await bankPaymentPage.goToOrderResumePage();
-
-    await expect(orderResumePage.getMessageOfAccomplish())
-      .toBe('Your order on My Store is complete.');
+  describe('Abrir la página en el navegador', () => {
+    it('', async () => {
+      await browser.get('http://automationpractice.com/');
+    });
+  });
+  describe('Proceso de compra de la Camiseta', () => {
+    it('', async () => {
+      await menuContentPage.goToTShirtMenu();
+      await productListPage.goToTShirtProductDetail();
+      await productDetailPage.addToCart();
+      await productAddedModalPage.goToCheckoutPage();
+      await summaryStepPage.goToSignInPage();
+    });
+  });
+  describe('Logeo en la aplicación', () => {
+    it('', async () => {
+      await signInStepPage.goToAddressStep();
+    });
+  });
+  describe('Seleccionar la dirección por defecto', () => {
+    it('', async () => {
+      await addressStepPage.goToShippingStepPage();
+    });
+  });
+  describe('Pago en el banco', () => {
+    it('', async () => {
+      await shippingStepPage.goToPaymentStepPage();
+      await paymentStepPage.goToCheckPaymentStepPage();
+      await bankPaymentPage.goToOrderResumePage();
+  
+      await expect(orderResumePage.getMessageOfAccomplish())
+        .toBe('Your order on My Store is complete.');
+    });
   });
 });
