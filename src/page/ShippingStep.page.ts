@@ -2,7 +2,7 @@ import { $, ElementFinder } from 'protractor';
 
 export class ShippingStepPage {
   private get proceedToCheckoutButton(): ElementFinder {
-    return $('#form > p > button > span');
+    return $('[name="processCarrier"]');
   }
 
   private get termsCheckBox(): ElementFinder {
